@@ -1,4 +1,4 @@
-#Thu Nov 07 15:58:11 PST 2019
-base.0=/Users/angli/Workspace/st-2019-nina-caroline-project/build/app/intermediates/transforms/dexMerger/debug/0
+#Tue Nov 12 16:02:12 PST 2019
+base.0=/Users/angli/Workspace/yelp-demo/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

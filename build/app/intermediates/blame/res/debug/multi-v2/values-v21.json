@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/angli/Workspace/st-2019-nina-caroline-project/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/angli/Workspace/yelp-demo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/angli/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/cf523cce526a537295211e5b2c72bc8c/res/values-v21/values-v21.xml",
+                    "source": "/Users/angli/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/e341194d3380d20979584cb238a5f44f/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/angli/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/79e51979c90fbc179dda76968c494073/res/values-v21/values-v21.xml",
+                    "source": "/Users/angli/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f736d0563d4b863c3c6a045b2fbb8fa9/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/angli/Workspace/st-2019-nina-caroline-project/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "/Users/angli/Workspace/yelp-demo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
-                    "source": "/Users/angli/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/79e51979c90fbc179dda76968c494073/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/angli/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f736d0563d4b863c3c6a045b2fbb8fa9/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
