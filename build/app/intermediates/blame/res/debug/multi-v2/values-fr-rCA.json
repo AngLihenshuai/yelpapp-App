@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/angli/Workspace/yelp-demo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "/Users/angli/Workspace/yelpapp-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
                     "source": "/Users/angli/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f736d0563d4b863c3c6a045b2fbb8fa9/res/values-fr-rCA/values-fr-rCA.xml",

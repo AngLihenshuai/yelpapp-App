@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/angli/Workspace/yelp-demo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml",
+            "outputFile": "/Users/angli/Workspace/yelpapp-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml",
             "map": [
                 {
                     "source": "/Users/angli/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/264317f53f84087dc24982c85b3e1a6b/res/values-tl/values.xml",
