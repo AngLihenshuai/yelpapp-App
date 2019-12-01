@@ -12,28 +12,8 @@ class IndexPage extends StatefulWidget {
 }
 
 class _IndexPageState extends State<IndexPage> {
-  
-  // Inital page state 
-  String _searchText = "";
 
-   _IndexPageState() {
-    _filter.addListener(() {
-      if (_filter.text.isEmpty) {
-        setState(() {
-          _searchText = "";
-        });
-      } else {
-        setState(() {
-          _searchText = _filter.text;
-        });
-      }
-    });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-  }
+  final GlobalKey<ScaffoldState> _scaffoldstate = new GlobalKey<ScaffoldState>();
   
   // Get Location 
   double lat, long;
@@ -52,59 +32,6 @@ class _IndexPageState extends State<IndexPage> {
     lat = currentLocation.latitude;
     long = currentLocation.longitude;
   } 
-
-  // Main Function
-  _getBusList() async {
-    getLoc();
-    print(lat);
-    print(long);
-    String link = "https://api.yelp.com/v3/autocomplete?text=" + _searchText + "&latitude=" + lat.toString() + "&longitude=" + long.toString();
-    Uri uri = Uri.parse(link);
-
-    var req = new http.Request("GET", uri);
-    req.headers['Authorization'] =
-        'Bearer endKOtxDzmquiDBFQKImIss0K8oBAsSaatw84j7Z_mdayis_dfwdaAeiAGgARwPu7I9i3rYzQcNTVA8JL05phkq7O7elOZ5fLYjliuElh5ac8QyeJ9Lsdn871yE2XXYx';
-    var res = await req.send();
-    var obj = jsonDecode(await res.stream.bytesToString());
-    List name = [];
-    List id = [];
-    for (var term in obj['businesses']) {
-      print('business names: ' + term['name']);
-      print('business id: ' + term['id']);
-      name.add(term['name']);
-      id.add(term['id']);}
-    return [name, id];
-  }
-
-  // Build Main List 
-  Widget _buildList() {
-    return new FutureBuilder(
-      future: _getBusList(),
-      builder: (context, snapshot) {
-        if(snapshot.connectionState == ConnectionState.waiting) {
-          return Center(
-            child: CircularProgressIndicator()
-          );
-        } else if(snapshot.hasData) {
-          return ListView.builder(
-            itemCount: snapshot.data[0].length,
-            itemBuilder: (BuildContext context, int index) {
-            return new ListTile(
-              title: Text(snapshot.data[0][index]),
-              onTap: () => {
-                Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ResDetailPage())),
-              globals.searchname = snapshot.data[0][index],
-              globals.searchid = snapshot.data[1][index],
-            },
-          );
-        },);
-        } else {
-        return new Container();
-        }
-      }
-    );
-  }
 
   // loadNearbyRestaurants
   Future loadNearbyRestaurants() async {
@@ -158,52 +85,6 @@ class _IndexPageState extends State<IndexPage> {
       ),
     );
   }
-  
-  // Search Bar 
-  final GlobalKey<ScaffoldState> _scaffoldstate = new GlobalKey<ScaffoldState>();
-  final TextEditingController _filter = new TextEditingController();
-  int index = 1;
-  bool currentlySearching = false;
-  Icon _searchIcon = new Icon(Icons.search);
-  Widget _searchBarTitle = new Text('Input your food type here');
-
-  void _searchPressed() {
-    setState(() {
-      if (this._searchIcon.icon == Icons.search) {
-        this._searchIcon = new Icon(Icons.close);
-        this._searchBarTitle = new TextField(
-          controller: _filter,
-          decoration: new InputDecoration(hintText: 'Search...'),
-        );
-        currentlySearching = true;
-      } else {
-        this._searchIcon = new Icon(Icons.search);
-        this._searchBarTitle = new Text('Search');
-        _filter.clear();
-        currentlySearching = false;
-      }
-    });
-  }
-
-  Widget _buildBar(BuildContext context) {
-    return new AppBar(centerTitle: true, title: _searchBarTitle, actions: [
-      new IconButton(
-        alignment: Alignment.center,
-        icon: _searchIcon,
-        onPressed: _searchPressed,
-      ),
-    ]);
-  }
-
-  // Build Container
-  Widget overlayContainer() {
-   if (currentlySearching == true) {
-    return Container(
-      color: Colors.white,
-      child: _buildList());
-    } else 
-      return Container(child:Text("Please insert your type of food in search bar"));
-  }
 
   // Build Page 
   @override
@@ -249,30 +130,21 @@ class _IndexPageState extends State<IndexPage> {
                             itemCount: 5,
                             itemBuilder: (BuildContext context, int index) {
                               return _buildCard(snapshot.data[index]['name'], snapshot.data[index]['distance'].toStringAsFixed(2), snapshot.data[index]['id']);
-                            },
-                        );}                    
+                          },
+                        );
+                      }                    
                     }                      
-                  })
+                  }
+                )
               ],
             ),
           ),
-        //overlayContainer(),
         ],
-      ),
-       
-          )
-        );
+      ),)
+    );
   }
 }
 
-// @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body:Center(
-//         child: Text('Test Main Page'),
-//       )
-//     );
-//   }
   
 
 
