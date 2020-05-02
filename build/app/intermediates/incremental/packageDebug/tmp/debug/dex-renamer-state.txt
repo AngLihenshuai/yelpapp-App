@@ -1,4 +1,0 @@
-#Sun Dec 01 10:59:25 PST 2019
-base.0=/Users/angli/Workspace/yelpapp-App/build/app/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
