@@ -15,7 +15,7 @@ class BottomNavBar extends StatefulWidget {
   _BottomNavBarState createState() => _BottomNavBarState(currentIndex);
 }
 
-class _BottomNavBarState extends State<BottomNavBar> {    
+class _BottomNavBarState extends State<BottomNavBar> {
   int currentIndex;
    _BottomNavBarState(this.currentIndex);
   @override
@@ -27,7 +27,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     BottomNavigationBarItem(
         icon: Icon(CupertinoIcons.profile_circled), title: Text('profile')),
   ];
-  final List tabBodies = [MyHomePage(), SearchPage(), ProfilePage()];  
+  final List tabBodies = [MyHomePage(), SearchPage(), ProfilePage()];
   var currentPage;
 
   @override
@@ -40,7 +40,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      currentIndex: currentIndex,      
+      currentIndex: currentIndex,
       items: bottomTabs,
       onTap: (index) {
         int currentIndex = index;

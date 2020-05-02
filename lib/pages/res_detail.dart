@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'address.dart';
-import 'globals.dart' as globals;
-import 'item2.dart';
+import '../util/consant.dart';
+import '../util/globals.dart' as globals;
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../tools/appBar.dart';
 import '../tools/bottomBar.dart';
+import '../tools/item.dart';
 
 class ResDetailPage extends StatefulWidget {
   @override

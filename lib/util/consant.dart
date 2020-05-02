@@ -1,4 +1,4 @@
-class Address {  
+class Address {
   static const String search_by_id_URL = "https://api.yelp.com/v3/businesses/";
   static const String nearby_URL = "https://api.yelp.com/v3/businesses/search?term=restaurants&latitude=";
   static const String search_URL = "https://api.yelp.com/v3/autocomplete?text=";

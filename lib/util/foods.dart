@@ -1,4 +1,4 @@
-List<Map> foods = [
+List<Map> hot_search_foods = [
   {
     "img": "assets/food1.jpeg",
     "name": "Fruit Salad"
