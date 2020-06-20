@@ -3,12 +3,13 @@ import 'package:flutter/services.dart';
 import 'package:location/location.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'globals.dart' as globals;
 import './res_detail.dart';
-import '../util/consant.dart';
-import '../util/foods.dart';
-import '../util/globals.dart' as globals;
+import 'address.dart';
+import './foods.dart';
 import '../tools/ratingStar.dart';
 import '../tools/bottomBar.dart';
+// import 'address.dart';
 import '../tools/appBar.dart';
 
 class SearchPage extends StatefulWidget {
@@ -128,9 +129,9 @@ class _SearchPageState extends State<SearchPage> {
           shrinkWrap: true,
           primary: false,
           physics: NeverScrollableScrollPhysics(),
-          itemCount: hot_search_foods == null ? 0 : hot_search_foods.length,
+          itemCount: foods == null ? 0 : foods.length,
           itemBuilder: (BuildContext context, int index) {
-            Map food = hot_search_foods[index];
+            Map food = foods[index];
             return ListTile(
               title: Text(
                 "${food['name']}",

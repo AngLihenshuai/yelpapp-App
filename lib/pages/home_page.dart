@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:location/location.dart';
-import '../tools/resList.dart';
+import './resList.dart';
 import '../tools/bottomBar.dart';
 import '../tools/appBar.dart';
-import '../util/consant.dart';
+import 'address.dart';
 import 'res_detail.dart';
-import '../tools/hotel_list_data.dart';
+import './hotel_list_data.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import '../util/globals.dart' as globals;
+import 'globals.dart' as globals;
 // import 'res_details.dart';
 
 class MyHomePage extends StatefulWidget {

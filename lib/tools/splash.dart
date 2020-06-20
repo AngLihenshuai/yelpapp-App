@@ -24,21 +24,27 @@ class _SplishPageState extends State<SplishPage> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.blueAccent),
+            decoration: BoxDecoration(color: Colors.white),
           ),
           Column(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
-            Expanded(
-                flex: 2,
-                child: Container(
+            Container(height:150),
+            Padding(
+                  padding: EdgeInsets.only(top: 50.0, left: 30.0, right: 30.0),
+                  child: Image.asset(
+                    "assets/Dishcoverylogo.png",
+                    fit: BoxFit.cover,
+                    width: 100.0,
+                    height: 100.0,
+                  ),
+                ),
+            Expanded(flex: 1,
+             child: Container(
                     child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(top: 15.0),
-                    ),
-                    Text("Yelp App",
+                  children: <Widget>[                    
+                    Text("Dishcovery",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.blueAccent,
                             fontSize: 40.0,
                             fontFamily: "Rajdhani"))
                   ],
@@ -49,13 +55,13 @@ class _SplishPageState extends State<SplishPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.blueAccent),
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 30.0),
                   ),
                   Text(
-                    "A DIY Yelp APP",
+                    "Find the best food",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 18.0,
@@ -63,7 +69,7 @@ class _SplishPageState extends State<SplishPage> {
                   )
                 ],
               ),
-            )
+            )            
           ])
         ],
       ),

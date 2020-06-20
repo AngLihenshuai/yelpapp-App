@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './tools/splash.dart';
+import 'package:splashscreen/splashscreen.dart';
+import 'index.dart';
 
 // async get
 void main() async {
@@ -10,7 +12,7 @@ class Yelp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Yelp DIY APP',
+      title: 'Dishcovery',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
